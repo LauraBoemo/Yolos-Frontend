@@ -5,10 +5,12 @@ import {LinearGradient} from "expo-linear-gradient";
 type AppTextInputProps = {
     placeholder: string;
     icon: string;
+    onChange: (((text: string) => void) & Function);
+    value: string;
 };
 
 export function AppTextInput(props: AppTextInputProps) {
-    const {placeholder, icon} = props;
+    const {placeholder, icon, onChange, value} = props;
 
     return (
         <LinearGradient
@@ -17,6 +19,8 @@ export function AppTextInput(props: AppTextInputProps) {
             style={{borderRadius: 15}}
         >
             <TextInput
+                value={value}
+                onChangeText={onChange}
                 label={placeholder}
                 theme={{
                     colors: {

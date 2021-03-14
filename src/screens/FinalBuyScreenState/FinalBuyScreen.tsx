@@ -3,9 +3,9 @@ import {useNavigation} from "@react-navigation/native";
 import {Image, ScrollView, View, ImageBackground, TouchableOpacity} from "react-native";
 import {Headline, Text, useTheme} from "react-native-paper";
 
-export function CartScreen(): ReactElement {
+export function FinalBuyScreen(): ReactElement {
     const {colors} = useTheme();
-    const {navigate, setOptions} = useNavigation();
+    const {setOptions} = useNavigation();
 
     useEffect((): void => {
         setOptions({
@@ -24,28 +24,21 @@ export function CartScreen(): ReactElement {
             </View>
 
             <Headline style={{fontSize: 30, color: "#fff", marginHorizontal: 22, marginBottom: 25}}>
-                Seus carrinho...
+                Seus ingressos...
             </Headline>
 
             <View style={{height: 450, marginTop: 1, alignItems: 'center'}}>
                 <ScrollView showsVerticalScrollIndicator={false} > 
-                    <View style={{height: 200, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 15}}>
-                    <Image source={require('../../../assets/BarBack.jpg')} style={{ flex: 2, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
+                    <View style={{height: 200, width: 250, marginLeft: 55, borderRadius: '25', alignItems:'center', margin: 15}}>
+                    <Image source={require('../../../assets/BarBack.jpg')} style={{ flex: 2, width: 250, height: null, resizeMode:'cover', borderRadius: '25'}}/>
                     </View>
-                    <View style={{height: 200, width: 250, marginLeft: 55, marginRight: 20, marginEnd:20, borderRadius: 25, margin: 15}}>
-                        <Image source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
+                    <View style={{height: 200, width: 250, marginLeft: 55, marginRight: 20, marginEnd:20, borderRadius: '25', margin: 15}}>
+                        <Image source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: '25'}}/>
                     </View>
-                    <View style={{height: 200, width: 250, marginLeft: 55, marginRight: 20, marginEnd:20, borderRadius: 25, margin: 15}}>
-                        <Image source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
+                    <View style={{height: 200, width: 250, marginLeft: 55, marginRight: 20, marginEnd:20, borderRadius: '25', margin: 15}}>
+                        <Image source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: '25'}}/>
                     </View>
                 </ScrollView>
-            </View>
-
-            <View style={{alignItems: 'center'}}>
-                    <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}>
-                        <Image style={{width: 313, height: 35, marginTop: 1, borderRadius: 20}}
-                               source={require('../../../assets/Car.jpg')}/>
-                    </TouchableOpacity>
             </View>
 
         </ImageBackground>

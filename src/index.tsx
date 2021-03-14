@@ -9,6 +9,9 @@ import {AuthScreenStack} from "./screens/AuthScreenStack";
 import {AccountScreenStack} from "./screens/AccountScreenStack";
 import {CartScreenStack} from "./screens/CartScreenStack";
 import {ShareScreenStack} from "./screens/ShareScreenStack";
+import {BuyScreenState} from "./screens/BuyScreenState";
+import {FinalBuyScreen} from "./screens/FinalBuyScreenState";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -16,11 +19,12 @@ export function RootNavigator(): ReactElement {
     const {colors, fonts} = useTheme();
 
     return (
+
         <NavigationContainer>
 
+
             <Tab.Navigator
-                // Preciso me lembrar que é aqui que defino a primeira tela... quando a primeira tela funcionar :')
-                initialRouteName='HomeScreenStack' 
+                initialRouteName='AuthScreen' 
                 tabBarOptions={{
                     style: {
                         backgroundColor: 'white',
@@ -32,18 +36,16 @@ export function RootNavigator(): ReactElement {
                     inactiveTintColor: colors.placeholder,
                     labelStyle: {fontFamily: fonts.medium.fontFamily},
             }}>
-                 <Tab.Screen
+
+                <Tab.Screen
                     name="AuthScreenStack"
                     component={AuthScreenStack}
                     options={{
                         title: ' ',
                         tabBarVisible: false,
-                        tabBarIcon: ({color, size}): ReactElement => (
-                            <MaterialCommunityIcons name="folder-star-outline" color='#2D2D2E' size={size}/>
-                        ),
                     }}
                 />
-                
+
                 <Tab.Screen
                     name="HomeScreenStack"
                     component={HomeScreenStack}
@@ -66,6 +68,14 @@ export function RootNavigator(): ReactElement {
                     }}
                 />
 
+                {/* <Tab.Screen
+                    name="FinalBuyScreen"
+                    component={FinalBuyScreen}
+                    options={{
+                        title: ' ',
+                    }}
+                /> */}
+
                 <Tab.Screen
                     name="CartScreenStack"
                     component={CartScreenStack}
@@ -86,7 +96,17 @@ export function RootNavigator(): ReactElement {
                         ),
                     }}
                 />
+                
+                <Tab.Screen
+                    name="BuyScreenState"
+                    component={BuyScreenState}
+                    options={{
+                        title: ' ',
+                    }}
+                />
+
             </Tab.Navigator>
+
         </NavigationContainer>
     )
 }

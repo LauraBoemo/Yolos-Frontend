@@ -1,16 +1,16 @@
 import React, {ReactElement} from "react";
 import {useTheme} from "react-native-paper";
 import {createStackNavigator} from "@react-navigation/stack";
-import {CartScreen} from "./CartScreen";
+import {BuyScreen} from "./BuyScreen";
 
-const CartStackNavigator = createStackNavigator();
+const BuyStackNavigator = createStackNavigator();
 
-export function CartScreenStack(): ReactElement {
+export function BuyScreenState(): ReactElement {
     const {colors, fonts} = useTheme();
 
     return (
-        <CartStackNavigator.Navigator
-            initialRouteName='CartScreen'
+        <BuyStackNavigator.Navigator
+            initialRouteName='BuyScreen'
             screenOptions={{
                 headerTitleStyle: {
                     color: colors.text,
@@ -19,7 +19,7 @@ export function CartScreenStack(): ReactElement {
                 headerStyle: {backgroundColor: colors.background}
             }}
         >
-            <CartStackNavigator.Screen name="CartScreen" options={{title: 'Cart'}} component={CartScreen}/>
-        </CartStackNavigator.Navigator>
+            <BuyStackNavigator.Screen name="BuyScreen" options={{title: 'Buy'}} component={BuyScreen}/>
+        </BuyStackNavigator.Navigator>
     );
 }

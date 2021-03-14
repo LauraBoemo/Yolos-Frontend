@@ -1,8 +1,8 @@
 import {StatusBar} from "expo-status-bar";
 import React, {ReactElement, useEffect} from "react";
-import {Image, SafeAreaView, View, ImageBackground, TouchableOpacity} from "react-native";
+import {Image, View, ImageBackground, TouchableOpacity} from "react-native";
 import {useNavigation} from "@react-navigation/native";
-import {Card, Headline, TextInput, useTheme, Text, Button} from "react-native-paper";
+import {Headline, TextInput, useTheme, Text} from "react-native-paper";
 
 export function AccountScreen(): ReactElement {
     const {colors} = useTheme();
@@ -60,7 +60,7 @@ export function AccountScreen(): ReactElement {
                 
                 {/* Arrumar essa rota e a posição do login */}
                 <View style={{alignItems: 'center'}}>
-                        <TouchableOpacity onPress={(): void => navigate('./AuthScreen/LoginScreen')}>
+                        <TouchableOpacity onPress={(): void => navigate('AuthScreen')}>
                             <Image style={{width: 186, height: 49, marginTop: 250, borderRadius: 20}}
                                 source={require('../../../assets/Logout.jpg')}/>
                         </TouchableOpacity>
