@@ -6,6 +6,7 @@ import {Headline, TextInput, useTheme, Text} from "react-native-paper";
 
 export function AccountScreen(): ReactElement {
     const {colors} = useTheme();
+    const {navigate} = useNavigation();
 
     const {setOptions} = useNavigation();
     useEffect((): void => {
@@ -30,10 +31,10 @@ export function AccountScreen(): ReactElement {
             </View>
             <View style={{marginHorizontal: 22, flex: 1}}>
                 <Text style={{fontSize: 30, textAlign: 'center', color: "#fff", marginBottom: 20}}>
-                    Laura Boemo
+                    {/* Laura Boemo */}
                 </Text>
                 <TextInput
-                // Arrumar as cores
+                
                     disabled 
                     style={{
                         marginBottom: 15,
@@ -42,7 +43,7 @@ export function AccountScreen(): ReactElement {
                         borderBottomLeftRadius: 15,
                         borderBottomRightRadius: 15
                     }}
-                    value="lauraboemo@gmail.com"
+                    // value="lauraboemo@gmail.com"
                     left={<TextInput.Icon name='mail'/>}
                 />
                 <TextInput
@@ -54,7 +55,7 @@ export function AccountScreen(): ReactElement {
                         borderBottomLeftRadius: 15,
                         borderBottomRightRadius: 15
                     }}
-                    value="*******"
+                    // value="*******"
                     left={<TextInput.Icon name='lock'/>}
                 />
                 

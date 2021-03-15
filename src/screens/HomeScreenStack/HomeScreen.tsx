@@ -49,13 +49,15 @@ export function HomeScreen(): ReactElement {
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}> 
 
                     <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}  style={{height: 400, width: 250, marginLeft: 20, marginRight: 10, borderRadius: 25}} >
-                        <Image source={{uri: 'https://picsum.photos/700'}} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
+                        <Image source={require('../../../assets/Slogan1.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
                     </TouchableOpacity>
+
                     <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}  style={{height: 400, width: 250, marginLeft: 20, marginRight:10, borderRadius: 25}} >
-                        <Image source={{uri: 'https://picsum.photos/400'}} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
+                        <Image source={require('../../../assets/Slogan2.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
                     </TouchableOpacity>
+                    
                     <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}  style={{height: 400, width: 250, marginLeft: 20, marginRight:20, borderRadius: 25}} >
-                        <Image source={{uri: 'https://picsum.photos/200'}} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
+                        <Image source={require('../../../assets/Slogan3.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
                     </TouchableOpacity>
 
                 </ScrollView>

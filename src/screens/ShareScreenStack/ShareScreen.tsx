@@ -1,13 +1,12 @@
-import {StatusBar} from "expo-status-bar";
 import React, {ReactElement, useEffect} from "react";
 import {useNavigation} from "@react-navigation/native";
-import {Image, SafeAreaView, ScrollView, View, ImageBackground} from "react-native";
+import {Image, ScrollView, View, ImageBackground, TouchableOpacity} from "react-native";
 import {AppTextInput} from "../../components/Forms/TextInput";
-import {Button, Card, Headline, Text, TextInput, useTheme} from "react-native-paper";
+import {Headline, Text, useTheme} from "react-native-paper";
 
 export function ShareScreen(): ReactElement {
+    const {navigate, setOptions} = useNavigation();
     const {colors} = useTheme();
-    const {setOptions} = useNavigation();
 
     useEffect((): void => {
         setOptions({
@@ -25,27 +24,31 @@ export function ShareScreen(): ReactElement {
                 <View style={{marginLeft: 2}}><Text style={{fontSize: 50, color: '#fff', fontStyle: 'ubuntu'}}>Yolos.</Text></View>
             </View>
 
-            <Text style={{fontSize: 30, marginHorizontal: 22, marginBottom: 25, color: '#fff'}}>Festas para você...</Text>
-
-             {/* Caixa de pesquisa... Isso funciona? */}
+            <Headline style={{fontSize: 30, color: "#fff", marginHorizontal: 22, marginBottom: 15, marginTop: 15}}>
+                    Festas para você...
+            </Headline>
+            
              <View style={{marginHorizontal: 22, marginBottom: 15}}>
                 <AppTextInput placeholder="Busque pela sua próxima festa." icon="magnify"/>
             </View>
 
-            {/* Catálogo de festas */}
-            <View style={{height: 400, marginTop: 1, alignItems: 'center'}}>
                 <ScrollView showsVerticalScrollIndicator={false} > 
-                    <View style={{height: 200, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 10}}>
-                    <Image source={require('../../../assets/BarBack.jpg')} style={{ flex: 2, width: 250, height: null, resizeMode:'cover', borderRadius: '25'}}/>
-                    </View>
-                    <View style={{height: 200, width: 250, marginLeft: 55, marginRight: 20, marginEnd:20, borderRadius: 25, margin: 10}}>
-                        <Image source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: '25'}}/>
-                    </View>
-                    <View style={{height: 200, width: 250, marginLeft: 55, marginRight: 20, marginEnd:20, borderRadius: 25, margin: 10}}>
-                        <Image source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: '25'}}/>
-                    </View>
+                <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}  style={{height: 250, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 10}} >
+                        <ImageBackground source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 500, height: null, resizeMode:'cover', display: 'table'}}>
+                            <Image source={require('../../../assets/Slogan1.jpg')} style={{flex: 1, width: 150, marginLeft: 80, borderRadius: 25}}/>
+                        </ImageBackground>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}  style={{height: 250, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 10}} >
+                        <ImageBackground source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 500, height: null, resizeMode:'cover', display: 'table'}}>
+                            <Image source={require('../../../assets/Slogan2.jpg')} style={{flex: 1, width: 150, marginLeft: 80, borderRadius: 25}}/>
+                        </ImageBackground>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}  style={{height: 250, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 10, marginBottom:15}} >
+                        <ImageBackground source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 500, height: null, resizeMode:'cover', display: 'table'}}>
+                            <Image source={require('../../../assets/Slogan3.jpg')} style={{flex: 1, width: 150, marginLeft: 80, borderRadius: 25}}/>
+                        </ImageBackground>
+                    </TouchableOpacity>
                 </ScrollView>
-            </View>
 
         </ImageBackground>
         </View>

@@ -18,7 +18,7 @@ export function LoginScreen(): ReactElement {
     const [password, setPassword] = useState('');
 
     const handleLogin = (): void => {
-        axios.post('http://5c280f19d82a.ngrok.io/api/login',
+        axios.post('http://f870c7b62393.ngrok.io/api/login',
         {
             email: email,
             password: password,

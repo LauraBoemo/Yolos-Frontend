@@ -24,30 +24,38 @@ export function CartScreen(): ReactElement {
             </View>
 
             <Headline style={{fontSize: 30, color: "#fff", marginHorizontal: 22, marginBottom: 25}}>
-                Seus carrinho...
+                Seus ingressos...
             </Headline>
 
-            <View style={{height: 450, marginTop: 1, alignItems: 'center'}}>
-                <ScrollView showsVerticalScrollIndicator={false} > 
-                    <View style={{height: 200, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 15}}>
-                    <Image source={require('../../../assets/BarBack.jpg')} style={{ flex: 2, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
-                    </View>
-                    <View style={{height: 200, width: 250, marginLeft: 55, marginRight: 20, marginEnd:20, borderRadius: 25, margin: 15}}>
-                        <Image source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
-                    </View>
-                    <View style={{height: 200, width: 250, marginLeft: 55, marginRight: 20, marginEnd:20, borderRadius: 25, margin: 15}}>
-                        <Image source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 250, height: null, resizeMode:'cover', borderRadius: 25}}/>
-                    </View>
-                </ScrollView>
-            </View>
-
-            <View style={{alignItems: 'center'}}>
-                    <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}>
-                        <Image style={{width: 313, height: 35, marginTop: 1, borderRadius: 20}}
-                               source={require('../../../assets/Car.jpg')}/>
+            <ScrollView showsVerticalScrollIndicator={false} > 
+            
+                <Headline style={{fontSize: 30, color: "#fff", marginHorizontal: 22, marginBottom: 15, marginTop: 15}}>
+                    Comprados...
+                </Headline>
+                
+                <ScrollView showsVerticalScrollIndicator={false} >
+                <TouchableOpacity style={{height: 250, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 10}} >
+                        <ImageBackground source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 500, height: null, resizeMode:'cover', borderRadius: 5, display: 'table'}}>
+                            <Image source={require('../../../assets/Slogan1.jpg')} style={{flex: 1, width: 150, marginLeft: 80, borderRadius: 25}}/>
+                        </ImageBackground>
                     </TouchableOpacity>
-            </View>
+                    <TouchableOpacity style={{height: 250, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 10}} >
+                        <ImageBackground source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 500, height: null, resizeMode:'cover', borderRadius: 5, display: 'table'}}>
+                            <Image source={require('../../../assets/Slogan3.jpg')} style={{flex: 1, width: 150, marginLeft: 80, borderRadius: 25}}/>
+                        </ImageBackground>
+                    </TouchableOpacity>
 
+                    <Headline style={{fontSize: 30, color: "#fff", marginHorizontal: 22, marginBottom: 15, marginTop: 15}}>
+                        No carrinho...
+                    </Headline>
+
+                    <TouchableOpacity onPress={(): void => navigate('BuyScreenState')}  style={{height: 250, width: 250, marginLeft: 55, borderRadius: 25, alignItems:'center', margin: 10, marginBottom: 30}} >
+                        <ImageBackground source={require('../../../assets/BarBack.jpg')} style={{flex: 1, width: 500, height: null, resizeMode:'cover', borderRadius: 5, display: 'table'}}>
+                            <Image source={require('../../../assets/Slogan2.jpg')} style={{flex: 1, width: 150, marginLeft: 80, borderRadius: 25}}/>
+                        </ImageBackground>
+                    </TouchableOpacity>
+            </ScrollView>
+            </ScrollView>       
         </ImageBackground>
         </View>
     );

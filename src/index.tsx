@@ -10,7 +10,6 @@ import {AccountScreenStack} from "./screens/AccountScreenStack";
 import {CartScreenStack} from "./screens/CartScreenStack";
 import {ShareScreenStack} from "./screens/ShareScreenStack";
 import {BuyScreenState} from "./screens/BuyScreenState";
-import {FinalBuyScreen} from "./screens/FinalBuyScreenState";
 
 
 const Tab = createBottomTabNavigator();
@@ -22,19 +21,12 @@ export function RootNavigator(): ReactElement {
 
         <NavigationContainer>
 
-
             <Tab.Navigator
-                initialRouteName='AuthScreen' 
+                initialRouteName='AuthScreen'
                 tabBarOptions={{
                     style: {
-                        backgroundColor: 'white',
+                        backgroundColor: 'transparent',
                     },
-                    tabStyle: {
-                        ...(Platform.OS === 'android' && {paddingBottom: 5})
-                    },
-                    activeTintColor: colors.primary,
-                    inactiveTintColor: colors.placeholder,
-                    labelStyle: {fontFamily: fonts.medium.fontFamily},
             }}>
 
                 <Tab.Screen
@@ -67,14 +59,6 @@ export function RootNavigator(): ReactElement {
                         ),
                     }}
                 />
-
-                {/* <Tab.Screen
-                    name="FinalBuyScreen"
-                    component={FinalBuyScreen}
-                    options={{
-                        title: ' ',
-                    }}
-                /> */}
 
                 <Tab.Screen
                     name="CartScreenStack"

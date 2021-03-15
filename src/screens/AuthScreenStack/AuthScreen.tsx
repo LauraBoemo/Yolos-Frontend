@@ -1,6 +1,6 @@
 import React, {ReactElement, useEffect} from "react";
 import {useNavigation} from "@react-navigation/native";
-import {Image, ImageBackground, SafeAreaView, TouchableOpacity, View, Text} from "react-native";
+import {Image, ImageBackground, TouchableOpacity, View} from "react-native";
 import {Banner} from "../../components/AuthScreen/Banner";
 
 export function AuthScreen(): ReactElement {
