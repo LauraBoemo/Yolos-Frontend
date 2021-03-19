@@ -9,7 +9,7 @@
 
 <br />
 <p align="center">
-  <a href="https://github.com/LauraBoemo/Yolos-Backend">
+  <a href="https://github.com/LauraBoemo/Yolos-Frontend">
     <img src="images/Imagem.jpg" alt="Logo">
   </a>
 </p>
