@@ -24,7 +24,7 @@ export function SignupScreen(): ReactElement {
 
     const handleSignUp = (): void => {
         // Atuação do Postman, cria requisição!
-        axios.post('http://f870c7b62393.ngrok.io/api/signup',
+        axios.post('http://1fdb651006f0.ngrok.io/api/signup',
          {
              name: name,
              email: email,
